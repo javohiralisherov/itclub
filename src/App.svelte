@@ -1,47 +1,48 @@
 <script>
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
+  // import Counter from "./lib/Counter.svelte";
 </script>
 
 <main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header_logo">Logo</div>
+        <div class="header__nav">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Service</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </div>
+        <div class="btn header__btn">Contact us</div>
+      </div>
+    </div>
+  </header>
 </main>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+  .header {
+    padding-top: 60px;
   }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+  .header__inner {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
+  .header__nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
   }
-  .read-the-docs {
-    color: #888;
+  .header__nav ul li {
+    margin-right: 60px;
+  }
+  .header__nav ul li a {
+    text-decoration: none;
+  }
+  .header__btn {
+    padding: 12px 24px;
+    font-weight: 500;
   }
 </style>

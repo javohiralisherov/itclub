@@ -12,5 +12,11 @@
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
     "svelte": "^4.0.5",
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@floating-ui/dom": "^1.4.5",
+    "flowbite": "^1.7.0",
+    "flowbite-svelte": "^0.40.2",
+    "tailwind-merge": "^1.14.0"
   }
 }

@@ -17,6 +17,7 @@
   import compasses from "./icons/compasses-2-line.svg";
   import smartphone from "./icons/smartphone-line.svg";
   import slideShow from "./icons/slideshow-line.svg";
+  import footerImage from "./icons/pexels-denniz-futalan-3453047.jpg";
 </script>
 
 <main>
@@ -74,7 +75,14 @@
       </div>
     </div>
     <div class="intro__showcase">
-      <video src={introVideo} autoplay loop width="100%" class="intro__video">
+      <video
+        src={introVideo}
+        autoplay
+        muted
+        loop
+        width="100%"
+        class="intro__video"
+      >
         <track kind="captions" />
       </video>
     </div>
@@ -267,6 +275,65 @@
       </div>
     </div>
   </div>
+  <div class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <h2>Birgalikda baland cho'qqilarni zabt etamiz</h2>
+      </div>
+    </div>
+    <div class="footer__inner-image">
+      <img src={footerImage} alt="" />
+    </div>
+    <div class="container">
+      <div class="footer__infos">
+        <div class="footer__infos-logo">
+          <h3>IT-CLUB</h3>
+          <ul>
+            <li>Uzbekistan, Tashkent, Yunusabad-19</li>
+          </ul>
+        </div>
+        <div class="footer__infos-project">
+          <h4>Bizning loyihalar</h4>
+          <ul>
+            <li>Car To-Go</li>
+            <li>Avtodrom</li>
+          </ul>
+        </div>
+        <div class="footer__infos-services">
+          <h4>Bizning xizmatlar</h4>
+          <ul>
+            <li>Biznesni tizimlashtirish</li>
+            <li>Vebsaytlar</li>
+            <li>Telegram botlar</li>
+            <li>Smm</li>
+            <li>Mobil ilovalar</li>
+          </ul>
+        </div>
+        <div class="footer__infos-contacts">
+          <h4>Bog'lanish uchun</h4>
+          <ul>
+            <li>
+              <img width="15" src={instagram} alt="" /><a
+                href="https://instagram.com/itc.uz"
+              >
+                Instagram</a
+              >
+            </li>
+            <li>
+              <img width="15" src={telegram} alt="" /><a
+                href="https://t.me/itclub21uz"
+              >
+                Telegram</a
+              >
+            </li>
+            <li>
+              <a href="tel:+998883766606"> +998 88 376-66-06</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 
 <style>
@@ -373,6 +440,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 10px;
     margin: 60px 0 100px;
+    padding: 20px;
   }
   .services__more-card {
     display: flex;
@@ -452,5 +520,62 @@
   }
   .team__card-link img {
     width: 30px;
+  }
+  .footer {
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
+  .footer__inner h2 {
+    font-size: var(--giant-size);
+    font-weight: 500;
+  }
+  .footer__inner-image {
+    margin: 70px 0;
+    height: 300px;
+    overflow: hidden;
+  }
+  .footer__inner-image {
+    width: 100%;
+  }
+  .footer__infos {
+    width: 100%;
+    border: 1px solid var(--shade-2);
+    padding: 40px;
+    border-radius: 10px;
+  }
+  .footer__infos {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__infos h4,
+  .footer__infos h3 {
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .footer__infos ul {
+    list-style-type: none;
+  }
+  .footer__infos ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 3px;
+    max-width: 200px;
+  }
+  .footer__infos ul li a {
+    text-decoration: none;
+  }
+
+  @media all and (max-width: 300px) {
+    .services__cards {
+      grid-template-columns: 1fr;
+    }
+    .services__more {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .team__cards {
+      grid-template-columns: 1fr 1fr;
+      padding: 20px;
+    }
   }
 </style>

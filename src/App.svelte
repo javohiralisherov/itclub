@@ -44,8 +44,10 @@
       <div class="intro__inner">
         <div class="intro__info">
           <h1>
-            G'oyalar shu yerda <u style="text-decoration-color: var(--shade-1);"
-              >Real</u
+            G'oyalar shu yerda
+            <span
+              >Real
+              <div class="intro__info-animation" /></span
             >likka aylanadi.
           </h1>
           <p>Dasturchilar jamoasini shakillantirib dunyo miqyosiga chiqamiz.</p>
@@ -174,8 +176,60 @@
             class="team__card-img"
             alt=""
           />
-          <h5>Javohir Alisherov</h5>
-          <p>UX/UI DESIGNER</p>
+          <h5>Abdulaziz Hoshimov</h5>
+          <p>Teamlead, Python developer</p>
+          <div class="team__card-links">
+            <div class="team__card-link">
+              <a href="https://instagram.com/javohiralisherov_">
+                <img src={instagram} alt="" />
+              </a>
+            </div>
+            <div class="team__card-link">
+              <a href="https://t.me/completeperson">
+                <img src={telegram} alt="" />
+              </a>
+            </div>
+            <div class="team__card-link">
+              <a href="">
+                <img src={github} alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="team__card">
+          <img
+            src={"https://picsum.photos/800"}
+            class="team__card-img"
+            alt=""
+          />
+          <h5>Ihtiyor Keldiyev</h5>
+          <p>Frontend developer</p>
+          <div class="team__card-links">
+            <div class="team__card-link">
+              <a href="https://instagram.com/javohiralisherov_">
+                <img src={instagram} alt="" />
+              </a>
+            </div>
+            <div class="team__card-link">
+              <a href="https://t.me/completeperson">
+                <img src={telegram} alt="" />
+              </a>
+            </div>
+            <div class="team__card-link">
+              <a href="">
+                <img src={github} alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="team__card">
+          <img
+            src={"https://picsum.photos/800"}
+            class="team__card-img"
+            alt=""
+          />
+          <h5>Shohruh Abdurasulov</h5>
+          <p>Python developer</p>
           <div class="team__card-links">
             <div class="team__card-link">
               <a href="https://instagram.com/javohiralisherov_">
@@ -201,7 +255,7 @@
             alt=""
           />
           <h5>Javohir Alisherov</h5>
-          <p>UX/UI DESIGNER</p>
+          <p>Frontend developer</p>
           <div class="team__card-links">
             <div class="team__card-link">
               <a href="https://instagram.com/javohiralisherov_">
@@ -227,7 +281,7 @@
             alt=""
           />
           <h5>Javohir Alisherov</h5>
-          <p>UX/UI DESIGNER</p>
+          <p>Frontend developer</p>
           <div class="team__card-links">
             <div class="team__card-link">
               <a href="https://instagram.com/javohiralisherov_">
@@ -253,7 +307,7 @@
             alt=""
           />
           <h5>Javohir Alisherov</h5>
-          <p>UX/UI DESIGNER</p>
+          <p>Frontend developer</p>
           <div class="team__card-links">
             <div class="team__card-link">
               <a href="https://instagram.com/javohiralisherov_">
@@ -374,6 +428,25 @@
     font-size: var(--ultra-size);
     font-weight: 500;
     margin-bottom: 20px;
+  }
+  .intro__info span {
+    position: relative;
+  }
+  .intro__info-animation {
+    width: 100%;
+    height: 10px;
+    background-color: var(--primary);
+    position: absolute;
+    left: 0;
+    animation: titleAnimation 1s infinite linear;
+  }
+  @keyframes titleAnimation {
+    0% {
+      background: linear-gradient(90deg, #3f51b5, transparent) #2196f3;
+    }
+    100% {
+      background: var(--primary);
+    }
   }
   .intro__info p {
     font-size: var(--large-size);
@@ -531,7 +604,7 @@
   }
   .footer__inner-image {
     margin: 70px 0;
-    height: 300px;
+    height: 200px;
     overflow: hidden;
   }
   .footer__inner-image {

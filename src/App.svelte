@@ -2,6 +2,11 @@
   // import Counter from "./lib/Counter.svelte";
   import introVideo from "./videos/introvideo.mp4";
 
+  import { Modals, closeModal } from "svelte-modals";
+
+  import { openModal } from "svelte-modals";
+  import Modal from "./components/modals.svelte";
+
   // icons
   import codeBoxLine from "./icons/code-box-line.svg";
   import hardDrive from "./icons/hard-drive-2-line.svg";
@@ -18,10 +23,17 @@
   import smartphone from "./icons/smartphone-line.svg";
   import slideShow from "./icons/slideshow-line.svg";
   import footerImage from "./icons/pexels-denniz-futalan-3453047.jpg";
+
+  function handleClick() {
+    openModal(Modal, { title: "Alert", message: "This is an alert" });
+  }
 </script>
 
 <main>
   <header class="header">
+    <Modals>
+      <div slot="backdrop" class="backdrop" on:click={closeModal} />
+    </Modals>
     <div class="container">
       <div class="header__inner">
         <div class="header_logo">
@@ -35,7 +47,7 @@
             <li><a href="">Blog</a></li>
           </ul>
         </div>
-        <div class="btn header__btn">Bog'lanish</div>
+        <div on:click={handleClick} class="btn header__btn">Bog'lanish</div>
       </div>
     </div>
   </header>
@@ -93,7 +105,7 @@
     <div class="container">
       <div class="services__inner">
         <h1 class="services__inner-title">
-          Sizga xizmatlarimizni taklif qilamiz.
+          Sizga xizmatlarimizni taklif qilamiz:
         </h1>
         <div class="services__cards">
           <div class="services__card">
@@ -168,7 +180,7 @@
   </div>
   <div class="team">
     <div class="container">
-      <h2 class="team__title">Jamoamiz bilan tanishing.</h2>
+      <h2 class="team__title">Jamoamiz bilan tanishing:</h2>
       <div class="team__cards">
         <div class="team__card">
           <img
@@ -332,7 +344,7 @@
   <div class="footer">
     <div class="container">
       <div class="footer__inner">
-        <h2>Birgalikda baland cho'qqilarni zabt etamiz</h2>
+        <h2>Birgalikda baland cho'qqilarni zabt etamiz.</h2>
       </div>
     </div>
     <div class="footer__inner-image">
@@ -391,6 +403,17 @@
 </main>
 
 <style>
+  .backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 98;
+  }
+
   .header {
     padding-top: 60px;
     padding-bottom: 80px;

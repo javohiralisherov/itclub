@@ -17,6 +17,7 @@
     "@floating-ui/dom": "^1.4.5",
     "flowbite": "^1.7.0",
     "flowbite-svelte": "^0.40.2",
+    "svelte-modals": "^1.3.0",
     "tailwind-merge": "^1.14.0"
   }
 }
